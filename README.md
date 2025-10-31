@@ -20,7 +20,9 @@ python train.py --name <your running name> --json_path <your json file path> --m
 ```
 The code will automatically create a folder to store logs under /src/checkpoints/your running name/
 
-**Test kidney dataset**
+For training the domain alignment version, use ```train_ours.py```. The detailed split information or format can be viewed in ```create_dataset``` folders.
+
+**Test**
 
 ```
 python test.py
