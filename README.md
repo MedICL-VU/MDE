@@ -2,10 +2,10 @@
 Monocular absolute depth estimation from endoscopy via domain-invariant feature learning and latent consistency
 
 **Motivation**
-<img src='figs/intro.png' width='1000'> \
+<img src='figs/intro.png' width='1000'> 
 
 **Qualitative results**
-<img src='figs/qualitative.png' width='1000'> \
+<img src='figs/qualitative.png' width='1000'> 
 
 
 ## Usage
