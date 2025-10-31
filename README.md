@@ -1,8 +1,11 @@
 # MDE
 Monocular absolute depth estimation from endoscopy via domain-invariant feature learning and latent consistency
 
-<img src='figs/intro.png' width='600'> \
-<img src='figs/qualitative.png' width='600'> \
+**Motivation**
+<img src='figs/intro.png' width='1000'> \
+
+**Qualitative results**
+<img src='figs/qualitative.png' width='1000'> \
 
 
 ## Usage
