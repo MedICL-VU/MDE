@@ -47,7 +47,7 @@ class MDE_dataset(Dataset):
             depth = tifffile.imread(label_path).astype(float)
             depth = depth / 65535 * 100
             valid_mask = depth > 0
-            depth[valid_mask] = 1000.0 / depth[valid_mask]
+            # depth[valid_mask] = 1000.0 / depth[valid_mask]
         else:
             depth = Image.open(label_path).convert('L')
 
