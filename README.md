@@ -1,5 +1,5 @@
 # MDE
-Monocular absolute depth estimation from endoscopy via domain-invariant feature learning and latent consistency
+Monocular absolute depth estimation from endoscopy via domain-invariant feature learning and latent consistency [arxiv link](https://arxiv.org/abs/2511.02247)
 
 **Motivation**
 <img src='figs/intro.png' width='1000'> 
