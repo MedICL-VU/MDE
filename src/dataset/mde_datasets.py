@@ -67,8 +67,10 @@ class MDE_dataset(Dataset):
             depth = augmented['mask']
 
         # === Valid mask: depth > 0 ===
-        valid_mask = torch.zeros_like(depth, dtype=torch.uint8)
-        valid_mask[depth > 0] = 1
+        # valid_mask = torch.zeros_like(depth, dtype=torch.uint8)
+        # valid_mask[depth > 0] = 1
+        valid_mask = cv2.resize(valid_mask, (image.shape[2], image.shape[1]), interpolation=cv2.INTER_NEAREST)
+
 
 
         # === Convert image to CHW ===
