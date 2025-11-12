@@ -72,6 +72,7 @@ class MDE_dataset_semi(Dataset):
 
 
 
+        valid_mask = (depth > 0).astype(np.float32)
 
         # === Apply transforms ===
         augmented = self.transform(image=image, mask=depth)
@@ -85,8 +86,8 @@ class MDE_dataset_semi(Dataset):
         augmented_w_norm = self.transform_norm(image=real_w, mask=real_w_mask)
         real_w, real_w_mask = augmented_w_norm['image'], augmented_w_norm['mask']
         # === Valid mask: depth > 0 ===
-        valid_mask = np.zeros_like(depth, dtype=np.uint8)
-        valid_mask[depth > 0] = 1
+        valid_mask = cv2.resize(valid_mask, (image.shape[2], image.shape[1]), interpolation=cv2.INTER_NEAREST)
+
 
         # import matplotlib.pyplot as plt
         # plt.figure()
