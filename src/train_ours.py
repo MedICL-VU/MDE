@@ -45,7 +45,7 @@ def main():
 
 
     train_transform = Compose([
-            A.Resize(args.height, args.width),
+            A.Resize(args.height, args.width, mask_interpolation=cv2.INTER_AREA),
             A.RandomRotate90(),
             A.HorizontalFlip(p=0.5),
             A.VerticalFlip(p=0.5),
@@ -59,10 +59,10 @@ def main():
             A.RandomBrightnessContrast(p=0.1),
             A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
             A.ToTensorV2(),
-        ], seed=42, additional_targets={'valid_mask': 'mask'})
+        ], seed=42)
 
     train_transform_w = Compose([
-        A.Resize(args.height, args.width),
+        A.Resize(args.height, args.width, mask_interpolation=cv2.INTER_AREA),
         A.RandomRotate90(),
         A.HorizontalFlip(p=0.5),
         A.VerticalFlip(p=0.5),
@@ -93,9 +93,9 @@ def main():
 
     valset_render = MDE_dataset(args.json_path, mode='val_render',
                                 transform=Compose([
-                                    A.Resize(args.height, args.width),
+                                    A.Resize(args.height, args.width, mask_interpolation=cv2.INTER_AREA),
                                     A.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-                                    A.ToTensorV2()], seed=42, additional_targets={'valid_mask': 'mask'}))
+                                    A.ToTensorV2()], seed=42))
     valloader_render = DataLoader(valset_render, batch_size=args.bs, pin_memory=True,
                                   num_workers=4, drop_last=True, worker_init_fn=seed_worker,generator=g)
 
