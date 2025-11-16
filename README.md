@@ -1,6 +1,9 @@
 # MDE
 Monocular absolute depth estimation from endoscopy via domain-invariant feature learning and latent consistency [arxiv link](https://arxiv.org/abs/2511.02247)
 
+**Core Idea**
+Because real endoscopic images (typically) do not have ground truth depth, this work leverages ``synthetically rendered images with known depth`` with ``information from real endoscopic images`` to improve depth estimation performance on real data
+
 **Motivation**
 <img src='figs/intro.png' width='1000'> 
 
