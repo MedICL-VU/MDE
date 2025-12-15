@@ -3,7 +3,7 @@ import torch.nn
 from torch.utils.data import DataLoader
 from torch.optim import AdamW
 from utils import *
-from dataset.mde_datasets import MDE_dataset
+from dataset.mde_datasets import MDE_dataset, ResizeWithSeparateMaskModes
 import albumentations as A
 from albumentations.core.composition import Compose
 import segmentation_models_pytorch as smp
