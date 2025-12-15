@@ -57,7 +57,7 @@ def main():
     seed_worker, g = get_dataloader_seed_utils(seed=42)
 
     trainset = MDE_dataset(args.json_path, mode='train', transform=train_transform)
-    trainloader = DataLoader(trainset, batch_size=args.bs, pin_memory=True, num_workers=4, drop_last=False, shuffle=True)
+    trainloader = DataLoader(trainset, batch_size=args.bs, pin_memory=True, num_workers=4, drop_last=False, shuffle=True, generator=g)
 
     valset_render = MDE_dataset(args.json_path, mode='val',
                                 transform=Compose([
