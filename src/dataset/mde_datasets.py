@@ -8,6 +8,29 @@ import glob
 import PIL.Image as Image
 import json
 import tifffile
+
+class ResizeWithSeparateMaskModes(A.Resize):
+    def apply(self, img, interpolation=cv2.INTER_AREA, **params):
+        # this is used for image
+        return cv2.resize(img, (self.width, self.height))
+
+    def apply_to_mask(self, mask, interpolation=cv2.INTER_NEAREST, **params):
+        target = params.get("target")
+        if target == "valid_mask":
+            # valid_mask → nearest neighbor
+            return cv2.resize(mask, (self.width, self.height), interpolation=cv2.INTER_NEAREST)
+        else:
+            # depth mask → area
+            return cv2.resize(mask, (self.width, self.height), interpolation=cv2.INTER_NEAREST)# INTER_AREA
+
+    def get_params_dependent_on_targets(self, params):
+        return {}
+
+    @property
+    def targets_as_params(self):
+        return ["image", "mask", "valid_mask"]
+
+
 filename_types = ['png', 'jpg', 'jpeg', 'tif', 'tiff', 'PNG', 'JPG', 'JPEG', 'TIFF', 'TIFF', 'npz', 'npy']
 class MDE_dataset(Dataset):
     def __init__(self, json_path, mode='train', transform=None, geometry_transform=None, norm_transform=None):
