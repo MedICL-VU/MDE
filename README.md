@@ -40,10 +40,9 @@ you need to change the ```pretrained_path```, ```name``` and other arguments in 
 
 
 If you find this repository useful, please consider citing this paper:
-```
+```bibtex
 @inproceedings{li2026mde,
-  title={Monocular absolute depth estimation from endoscopy via
-domain-invariant feature learning and latent consistency},
+  title={Monocular absolute depth estimation from endoscopy via domain-invariant feature learning and latent consistency},
   author = {Li, Hao and Lu, Daiwei and d'Almeida, Jesse and Isik, Dilara and Khodapanah Aghdam, Ehsan and DiSanto, Nick and Acar, Ayberk and Sharma, Susheela and Wu, Jie Ying and Webster III, Robert J. and Oguz, Ipek},
   booktitle={Medical Imaging 2026: Image Processing},
   volume={in press},
