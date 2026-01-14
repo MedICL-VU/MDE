@@ -40,7 +40,7 @@ you need to change the ```pretrained_path```, ```name``` and other arguments in 
 
 **Application**
 
-Code for our MDE (this repo) and [Segmentation](https://github.com/MedICL-VU/needle_seg) to better support [SLAM reconstruction](https://github.com/vu-maple-lab/perseus/).
+Code for our [MDE](https://github.com/MedICL-VU/MDE) (this repo) and [Segmentation](https://github.com/MedICL-VU/needle_seg) to better support [SLAM reconstruction](https://github.com/vu-maple-lab/perseus/).
 
 For segmentation, you need to use the manual labels you want, this applies to CAO tumor, BPH lobes, needle, etc.
 
