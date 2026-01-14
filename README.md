@@ -44,6 +44,8 @@ Code for our [MDE](https://github.com/MedICL-VU/MDE) (this repo) and [Segmentati
 
 For segmentation, you need to use the manual labels you want, this applies to CAO tumor, BPH lobes, needle, etc.
 
+The pretrained weights can be found [here](https://vanderbilt.app.box.com/folder/360784591024)
+
 
 If you find this repository useful, please consider citing this paper:
 
