@@ -1,0 +1,1 @@
+Put pertained sam2 (sam2_hiera_large.pt) here
