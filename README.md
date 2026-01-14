@@ -73,4 +73,3 @@ Segmentation
   year={2025},
   organization={SPIE}
 }
-}
