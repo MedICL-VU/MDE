@@ -38,8 +38,17 @@ python test.py
 you need to change the ```pretrained_path```, ```name``` and other arguments in the script
 
 
+**Application**
+
+Code for our MDE (this repo) and [Segmentation](https://github.com/MedICL-VU/needle_seg) to better support [SLAM reconstruction](https://github.com/vu-maple-lab/perseus/).
+
+For segmentation, you need to use the manual labels you want, this applies to CAO tumor, BPH lobes, needle, etc.
+
 
 If you find this repository useful, please consider citing this paper:
+
+MDE
+
 ```bibtex
 @inproceedings{li2026mde,
   title={Monocular absolute depth estimation from endoscopy via domain-invariant feature learning and latent consistency},
@@ -50,3 +59,18 @@ If you find this repository useful, please consider citing this paper:
   organization={SPIE}
 }
 ```
+
+
+Segmentation
+
+```bibtex
+@inproceedings{li2025automated,
+  title={Automated segmentation of central airway obstruction from endoscopic video stream with deep learning},
+  author={Li, Hao and Wang, Jiacheng and Kumar, Nithin and d’Almeida, Jesse and Lu, Daiwei and Acar, Ayberk and Han, John and Yang, Qingyun and Ertop, Tayfun Efe and Wu, Jie Ying and others},
+  booktitle={Medical Imaging 2025: Image-Guided Procedures, Robotic Interventions, and Modeling},
+  volume={13408},
+  pages={113--119},
+  year={2025},
+  organization={SPIE}
+}
+}
